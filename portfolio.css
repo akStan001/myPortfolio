@@ -438,4 +438,44 @@
             right: 10%;
             animation: float 6s ease-in-out infinite reverse;
         }
+/* Base mobile styles */
+@media (max-width: 640px) {
+  html { font-size: 14px; }
+  
+  /* Stack all flex/grid containers */
+  .hero, .skills-grid, .projects-grid, .contact-links {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+  
+  /* Adjust hero section */
+  .hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  /* Make buttons full width */
+  .btn {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Desktop enhancements */
+@media (min-width: 1025px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
     
