@@ -478,4 +478,74 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Responsive Typography */
+:root {
+  --font-size-sm: clamp(0.8rem, 2vw, 1rem);
+  --font-size-md: clamp(1rem, 3vw, 1.5rem);
+  --font-size-lg: clamp(1.5rem, 4vw, 2.5rem);
+  --font-size-xl: clamp(2rem, 6vw, 4rem);
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+}
+
+p, li {
+  font-size: var(--font-size-md);
+}
+
+/* Touch-friendly elements */
+button, a {
+  min-width: 48px;
+  min-height: 48px;
+}
+
+/* Mobile menu */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav.active {
+  transform: translateX(0);
+}
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+/* Project filters */
+.project-filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.project-filters button {
+  padding: 8px 16px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.project-filters button:hover {
+  background: linear-gradient(45deg, #00DDEB, #FF00FF);
+}
     
