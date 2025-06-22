@@ -111,4 +111,124 @@
         }
         
         setTimeout(typeWriter, 1000); // Start after 1 second
+
+        // Enhanced mobile menu with swipe gestures
+const nav = document.createElement('div');
+nav.className = 'mobile-nav';
+nav.innerHTML = `
+  <div class="mobile-menu">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+`;
+
+// Add touch event listeners for swipe gestures
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', e => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', e => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  if (touchEndX < touchStartX - 50) {
+    // Swipe left - close menu
+    nav.classList.remove('active');
+  }
+  if (touchEndX > touchStartX + 50) {
+    // Swipe right - open menu
+    nav.classList.add('active');
+  }
+}
+// Add 3D tilt effect to skill cards
+VanillaTilt.init(document.querySelectorAll(".skill-card"), {
+  max: 15,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.2,
+  gyroscope: true
+});
+
+// Add skill level indicators
+const skills = [
+  { name: 'HTML5', level: 95 },
+  { name: 'CSS3', level: 90 },
+  { name: 'JavaScript', level: 85 },
+  { name: 'React.js', level: 80 }
+];
+
+const skillsContainer = document.querySelector('.skills-grid');
+skillsContainer.innerHTML = skills.map(skill => `
+  <div class="skill-card">
+    <div class="skill-name">${skill.name}</div>
+    <div class="skill-bar">
+      <div class="skill-level" style="width: ${skill.level}%"></div>
+    </div>
+    <div class="skill-percent">${skill.level}%</div>
+  </div>
+`).join('');
+
+// Project filtering system
+const projects = [
+  { 
+    title: "E-Commerce Store", 
+    tags: ["javascript", "css"], 
+    image: "commerceStore.jpeg",
+    links: {
+      live: "https://akstan001.github.io/premiumQosCloset/",
+      code: "https://github.com/akStan001/premiumCloset.git"
+    }
+  }
+  // Add other projects...
+];
+
+const filters = ['All', 'JavaScript', 'React', 'CSS'];
+const filterContainer = document.createElement('div');
+filterContainer.className = 'project-filters';
+
+filters.forEach(filter => {
+  const button = document.createElement('button');
+  button.textContent = filter;
+  button.addEventListener('click', () => filterProjects(filter));
+  filterContainer.appendChild(button);
+});
+
+document.querySelector('#projects').prepend(filterContainer);
+
+function filterProjects(tag) {
+  const filtered = tag === 'All' 
+    ? projects 
+    : projects.filter(proj => proj.tags.includes(tag.toLowerCase()));
+  
+  renderProjects(filtered);
+}
+// Lazy loading for images
+document.querySelectorAll('img').forEach(img => {
+  img.loading = 'lazy';
+});
+
+// Intersection Observer for animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section, .project-card').forEach(el => {
+  observer.observe(el);
+});
     
