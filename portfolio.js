@@ -231,4 +231,11 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('section, .project-card').forEach(el => {
   observer.observe(el);
 });
+VanillaTilt.init(document.querySelectorAll(".skill-card"), {
+  max: 15,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.2
+});
+
     
