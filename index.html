@@ -1,157 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akeem Gbolahan - Frontend Developer</title>
-    <!-- Font Awesome for Social Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="portfolio.css">
-   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akeem Gbolahan - Frontend Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="portfolio.css" />
 </head>
 <body>
-    <!-- Custom Cursor Elements -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
 
-    <!-- Animated Background Shapes -->
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
+  <!-- Background & Toggle -->
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  <button class="theme-toggle"><span class="slider"></span></button>
+  <div id="particles-js"></div>
 
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle">
-        <span class="slider"></span>
-    </button>
+  <!-- Hero -->
+  <section class="hero">
+    <img src="myPic.jpeg" alt="Akeem" />
+    <h1>AKEEM GBOLAHAN</h1>
+    <p class="typewriter">Frontend Developer | JavaScript Enthusiast | Problem Solver</p>
+    <a href="#projects" class="btn">Explore My Projects</a>
+  </section>
 
-    <!-- Particle Background -->
-    <div id="particles-js"></div>
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm a passionate frontend developer with expertise in HTML, CSS, JavaScript, React, Bootstrap, and Tailwind CSS. I specialize in responsive, user-friendly websites with clean code and modern design.</p>
+    <p>When not coding, I explore new tech, contribute to open-source, and mentor aspiring developers.</p>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <img src="myPic.jpeg" alt="Akeem">
-        <h1>AKEEM GBOLAHAN</h1>
-        <p class="typewriter">Frontend Developer | JavaScript Enthusiast | Problem Solver</p>
-        <a href="#projects" class="btn">Explore My Projects</a>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate frontend developer with expertise in HTML, CSS, JavaScript , React ,Bootstrap and Tailwind CSS. I specialize in creating responsive, user-friendly websites with clean code and modern design principles.</p>
-        <p>When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers.</p>
-    </section>
-
-    <!-- Skills Section -->
-   <!-- Skills Section -->
-<section id="skills">
+  <!-- Skills -->
+  <section id="skills">
     <h2>My Toolkit</h2>
     <div class="skills-grid">
-        <!-- Core Technologies -->
-        <div class="skill-card" data-tilt data-tooltip="Advanced semantic markup">
-            <i class="fab fa-html5"></i>
-            <span>HTML5</span>
-            <div class="skill-progress" style="--progress:95%"></div>
-        </div>
-
-        <div class="skill-card" data-tilt data-tooltip="CSS3 animations & transitions">
-            <i class="fab fa-css3-alt"></i>
-            <span>CSS3</span>
-            <div class="skill-progress" style="--progress:90%"></div>
-        </div>
-
-        <div class="skill-card" data-tilt data-tooltip="ES6+ features">
-            <i class="fab fa-js"></i>
-            <span>JavaScript</span>
-            <div class="skill-progress" style="--progress:85%"></div>
-        </div>
-
-        <div class="skill-card" data-tilt data-tooltip="Hooks, Context API">
-            <i class="fab fa-react"></i>
-            <span>React.js</span>
-            <div class="skill-progress" style="--progress:80%"></div>
-        </div>
-
-        <div class="skill-card" data-tilt data-tooltip="Utility-first CSS framework">
-            <i class="fas fa-wind"></i>
-            <span>Tailwind CSS</span>
-            <div class="skill-progress" style="--progress:88%"></div>
-        </div>
-
-        <div class="skill-card" data-tilt data-tooltip="Branching & Merging">
-            <i class="fab fa-git-alt"></i>
-            <span>Git</span>
-            <div class="skill-progress" style="--progress:82%"></div>
-        </div>
-
-        <div class="skill-card" data-tilt data-tooltip="Media queries & flexbox">
-            <i class="fas fa-mobile-alt"></i>
-            <span>Responsive Design</span>
-            <div class="skill-progress" style="--progress:93%"></div>
-        </div>
-
-        <div class="skill-card" data-tilt data-tooltip="RESTful integration">
-            <i class="fas fa-server"></i>
-            <span>REST APIs</span>
-            <div class="skill-progress" style="--progress:78%"></div>
-        </div>
-
-        <div class="skill-card" data-tilt data-tooltip="From my engineering background">
-            <i class="fas fa-cogs"></i>
-            <span>Problem Solving</span>
-            <div class="skill-progress" style="--progress:90%"></div>
-        </div>
+      <div class="skill-card" data-tilt data-tooltip="Advanced semantic markup">
+        <i class="fab fa-html5"></i><span>HTML5</span>
+        <div class="skill-progress" style="--progress:95%"></div>
+      </div>
+      <div class="skill-card" data-tilt data-tooltip="CSS3 animations & transitions">
+        <i class="fab fa-css3-alt"></i><span>CSS3</span>
+        <div class="skill-progress" style="--progress:90%"></div>
+      </div>
+      <div class="skill-card" data-tilt data-tooltip="ES6+ features">
+        <i class="fab fa-js"></i><span>JavaScript</span>
+        <div class="skill-progress" style="--progress:85%"></div>
+      </div>
+      <div class="skill-card" data-tilt data-tooltip="Hooks, Context API">
+        <i class="fab fa-react"></i><span>React.js</span>
+        <div class="skill-progress" style="--progress:80%"></div>
+      </div>
+      <div class="skill-card" data-tilt data-tooltip="Utility-first CSS framework">
+        <i class="fas fa-wind"></i><span>Tailwind CSS</span>
+        <div class="skill-progress" style="--progress:88%"></div>
+      </div>
+      <div class="skill-card" data-tilt data-tooltip="Branching & Merging">
+        <i class="fab fa-git-alt"></i><span>Git</span>
+        <div class="skill-progress" style="--progress:82%"></div>
+      </div>
+      <div class="skill-card" data-tilt data-tooltip="Media queries & flexbox">
+        <i class="fas fa-mobile-alt"></i><span>Responsive Design</span>
+        <div class="skill-progress" style="--progress:93%"></div>
+      </div>
+      <div class="skill-card" data-tilt data-tooltip="RESTful integration">
+        <i class="fas fa-server"></i><span>REST APIs</span>
+        <div class="skill-progress" style="--progress:78%"></div>
+      </div>
+      <div class="skill-card" data-tilt data-tooltip="From my engineering background">
+        <i class="fas fa-cogs"></i><span>Problem Solving</span>
+        <div class="skill-progress" style="--progress:90%"></div>
+      </div>
     </div>
-</section>
+  </section>
 
+  <!-- Projects -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="commerceStore.jpeg" alt="Project 1" />
+        <h3>E-Commerce Store</h3>
+        <p>Fully responsive online store using JavaScript and CSS animations.</p>
+        <a href="https://akstan001.github.io/premiumQosCloset/" class="btn">Live Demo</a>
+        <a href="https://github.com/akStan001/premiumCloset.git" class="btn">View Code</a>
+      </div>
+      <div class="project-card">
+        <img src="makky'sDualCareImage.jpeg" alt="Project 2" />
+        <h3>Responsive Business Page</h3>
+        <p>Productivity app with drag-and-drop functionality and local storage.</p>
+        <a href="https://akstan001.github.io/makky-sDualCare/" class="btn">Live Demo</a>
+        <a href="https://github.com/akStan001/makky-sDualCare.git" class="btn">View Code</a>
+      </div>
+      <div class="project-card">
+        <img src="pic-agrira.png" alt="Project 3" />
+        <h3>Oil & Gas Company Website</h3>
+        <p>Modern responsive site using HTML, Tailwind CSS & React.</p>
+        <a href="https://akstan001.github.io/agrira/" class="btn">Live Demo</a>
+        <a href="https://github.com/akStan001/agrira.git" class="btn">View Code</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="commerceStore.jpeg" alt="Project 1">
-                <h3>E-Commerce Store</h3>
-                <p>A fully responsive online store built with pure JavaScript and CSS animations.</p>
-                <a href="https://akstan001.github.io/premiumQosCloset/" class="btn">Live Demo</a> <a href="https://github.com/akStan001/premiumCloset.git" class="btn">View Code</a>
-            </div>
-            <div class="project-card">
-                <img src="makky'sDualCareImage.jpeg" alt="Project 2">
-                <h3>Responsive Business page</h3>
-                <p>A productivity app with drag-and-drop functionality and local storage.</p>
-                <a href=" https://akstan001.github.io/makky-sDualCare/" class="btn">Live Demo</a> <a href="https://github.com/akStan001/makky-sDualCare.git" class="btn">View Code</a>
-            </div>
-            <div class="project-card">
-                <img src="pic-agrira.png" alt="Project 3">
-                <h3>Modern, responsive site for an oil & gas brand.</h3>
-                <p>Developed a fast, mobile-friendly website using HTML, CSS, tailWind CSS and React to showcase the company’s services and improve its online presence.</p>
-                <a href= "https://akstan001.github.io/agrira/" class="btn">Live Demo</a> <a href="https://github.com/akStan001/agrira.git" class="btn">View Code</a>
-            </div>
-        </div>
-    </section>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <p>Have a project in mind or want to collaborate? Let’s connect!</p>
+    <p>Email: <a href="mailto:akeemgbolahan58@gmail.com">akeemgbolahan58@gmail.com</a></p>
+    <div class="contact-links">
+      <a href="https://github.com/akStan001" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com/ak_stan001" title="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <p>Have a project in mind or want to collaborate? I'd love to hear from you!</p>
-        <p>Email: <a href="mailto:akeemgbolahan58@gmail.com">akeemgbolahan58@gmail.com</a></p>
-        <div class="contact-links">
-            
-            <a href="https://github.com/akStan001" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/ak_stan001" title="Twitter"><i class="fab fa-twitter"></i></a>
-            
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer>
+    <p>Crafted by Akeem Gbolahan © <span id="year"></span> | All Rights Reserved</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>Crafted  by Akeem Gbolahan © <span id="year"></span> | All Rights Reserved</p>
-    </footer>
-
-    <!-- External Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    <script src="portfolio.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script src="portfolio.js"></script>
 </body>
 </html>
